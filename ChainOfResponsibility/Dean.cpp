@@ -49,9 +49,7 @@ std::string COR::Dean::message(std::string identifier)
 std::string COR::Dean::didNotRespondToMessage(std::string identifier)
 {
 	std::cout << "Dean did not respond to this message! Searching for another handler..." << std::endl;
-	COR::Department::nextHandlerForMessage(identifier, this->className);
-
-	return "";
+	return (COR::Department::nextHandlerForMessage(identifier, this->className)->message(identifier));
 
 }
 
