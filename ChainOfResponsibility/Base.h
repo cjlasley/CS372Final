@@ -7,6 +7,7 @@
 namespace COR{
 	class Base
 	{
+		friend class Department;
 	public:
 		Base(void);
 		Base(std::string objectName);
@@ -21,7 +22,7 @@ namespace COR{
 		virtual ~Base(void);
 
 	protected:
-		virtual void didNotRespondToMessage(std::string identifier, std::vector<std::string> arguments);
+		virtual std::string didNotRespondToMessage(std::string identifier, std::vector<std::string> arguments);
 		virtual void forwardMessage();
 
 		std::vector<std::string> availableResponders;

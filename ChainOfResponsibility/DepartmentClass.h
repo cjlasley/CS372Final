@@ -13,14 +13,17 @@ namespace COR{
 	public:
 		Department(void);
 
-		void registerType(std::string type);
-		void registerCatchall(COR::Base *theHandler);
-		std::string nextTypeInChain(std::string thisType);
+		static void registerType(std::string type);
+		static void registerObject(COR::Base* theObject);
+		static void registerCatchall(COR::Base *theHandler);
+		static std::string nextTypeInChain(std::string thisType);
+		static COR::Base* nextHandlerForMessage(const std::string &theMessage, const std::string &senderType);
 
 		virtual ~Department(void);
 
 	protected:
-		std::vector<std::string> responsibilityChainMembers;
+		static std::vector<std::string> responsibilityChainMembers;
+		static std::vector<COR::Base*>  chainObjects;
 		static COR::Base *catchallHandler;
 	};
 }

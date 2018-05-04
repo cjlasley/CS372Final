@@ -49,21 +49,20 @@ bool COR::Base::doesRespondToMessage(std::string identifier)
 	{
 		if (identifier.compare(availableResponders[i]))
 			return true;
-		else
-			return false;
 	}
+	return false;
 }
 
 
-void COR::Base::didNotRespondToMessage(std::string identifier, std::vector<std::string> arguments)
+std::string COR::Base::didNotRespondToMessage(std::string identifier, std::vector<std::string> arguments)
 {
-
+	return "";
 }
 
 
 void COR::Base::forwardMessage()
 {
-
+	
 }
 
 
