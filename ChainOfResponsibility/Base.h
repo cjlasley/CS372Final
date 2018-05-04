@@ -20,7 +20,7 @@ namespace COR{
 		virtual ~Base(void);
 
 	protected:
-		void didNotRespondToMessage(std::identifier, std::vector<std::string args>);
+		void didNotRespondToMessage(std::string identifier, std::vector<std::string> arguments);
 		void forwardMessage();
 
 		std::vector<std::string> availableResponders;
