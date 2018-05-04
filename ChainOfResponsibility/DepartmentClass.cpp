@@ -48,15 +48,11 @@ std::string COR::Department::nextTypeInChain(std::string thisType)
 
 COR::Base* COR::Department::nextHandlerForMessage(const std::string &theMessage, const std::string &senderType)
 {
-	std::string desiredType = Department::nextTypeInChain(senderType);
-	
-	for (int i = chainObjects.size()-1; i > 0; i--) {
-		if (chainObjects.at(i)->className == desiredType) {
-			return chainObjects.at(i);
+	for (int i = responsibilityChainMembers.size()-1; i > 0; i--) {
+		if (senderType == responsibilityChainMembers[i] && i != 1) {
+			return chainObjects[i-1];
 		}
 	}
-
-	return NULL;
 }
 
 
