@@ -14,15 +14,15 @@ namespace COR{
 		void retain(void);
 		void release(void);
 
-		std::string message(std::string identifier);
-		std::string message(std::string identifier, ...);
+		virtual std::string message(std::string identifier);
+		virtual std::string message(std::string identifier, ...);
 		bool doesRespondToMessage(std::string identifier);
 
 		virtual ~Base(void);
 
 	protected:
-		void didNotRespondToMessage(std::string identifier, std::vector<std::string> arguments);
-		void forwardMessage();
+		virtual void didNotRespondToMessage(std::string identifier, std::vector<std::string> arguments);
+		virtual void forwardMessage();
 
 		std::vector<std::string> availableResponders;
 		std::string className;
