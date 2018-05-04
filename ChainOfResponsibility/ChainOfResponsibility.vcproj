@@ -158,6 +158,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\DepartmentHead.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\main.cpp"
 				>
 			</File>
@@ -177,6 +181,10 @@
 			</File>
 			<File
 				RelativePath=".\DepartmentClass.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DepartmentHead.h"
 				>
 			</File>
 		</Filter>
