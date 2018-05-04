@@ -1,9 +1,9 @@
 #include "Base.h"
 
-Base::Base(void)
+COR::Base::Base(void)
 {
 }
 
-Base::~Base(void)
+COR::Base::~Base(void)
 {
 }
