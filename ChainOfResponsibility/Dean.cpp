@@ -45,11 +45,6 @@ std::string COR::Dean::message(std::string identifier)
 	}
 }
 
-std::string COR::Dean::message(std::string identifier, ...)
-{
-	return "";
-}
-
 
 std::string COR::Dean::didNotRespondToMessage(std::string identifier)
 {

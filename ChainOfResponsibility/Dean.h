@@ -14,7 +14,6 @@ namespace COR{
 		Dean(std::string identifier);
 
 		virtual std::string message(std::string identifier);
-		virtual std::string message(std::string identifier, ...);
 
 		virtual std::string didNotRespondToMessage(std::string identifier);
 		virtual void forwardMessage();

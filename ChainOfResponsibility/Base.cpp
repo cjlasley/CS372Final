@@ -4,8 +4,6 @@
 COR::Base::Base(void)
 {
 	referenceCount = 1;
-	className = "Base";
-	objectName = "";
 }
 
 
@@ -63,12 +61,6 @@ std::string COR::Base::didNotRespondToMessage(std::string identifier, std::vecto
 void COR::Base::forwardMessage()
 {
 	
-}
-
-
-std::string COR::Base::message(std::string identifier, ...)
-{
-	return "";
 }
 
 COR::Base::~Base(void)

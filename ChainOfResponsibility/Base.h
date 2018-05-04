@@ -16,7 +16,6 @@ namespace COR{
 		void release(void);
 
 		virtual std::string message(std::string identifier);
-		virtual std::string message(std::string identifier, ...);
 		bool doesRespondToMessage(std::string identifier);
 
 		virtual ~Base(void);
