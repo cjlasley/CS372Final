@@ -3,31 +3,55 @@
 
 COR::Base::Base(void)
 {
+	referenceCount = 1;
+	className = "Base";
+	objectName = "";
+}
 
+
+COR::Base::Base(std::string objectName)
+{
+	referenceCount = 1;
+	className = "Base";
+	objectName = objectName;
 }
 
 
 void COR::Base::retain(void)
 {
-
+	referenceCount++;
 }
 
 
 void COR::Base::release(void)
 {
-
+	referenceCount--;
+	if (referenceCount == 0)
+	{
+		delete this;
+	}
 }
 
 
 std::string COR::Base::message(std::string identifier)
 {
+	for (int i = 0; i < 12; i++)
+	{
+		
+	}
 	return "";
 }
 
 
 bool COR::Base::doesRespondToMessage(std::string identifier)
 {
-	return false;
+	for (int i = 0; i < availableResponders.size(); i++)
+	{
+		if (identifier.compare(availableResponders[i]))
+			return true;
+		else
+			return false;
+	}
 }
 
 

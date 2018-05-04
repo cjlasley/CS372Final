@@ -9,6 +9,7 @@ namespace COR{
 	{
 	public:
 		Base(void);
+		Base(std::string objectName);
 
 		void retain(void);
 		void release(void);
